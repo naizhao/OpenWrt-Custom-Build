@@ -20,7 +20,7 @@ on:
     paths:
       - 'config/k3.config'
   schedule:
-    - cron: 0 0 * * 5
+    - cron: 0 0 * * 2
 #  watch:
 #    types: started
 

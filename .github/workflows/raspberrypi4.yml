@@ -20,7 +20,7 @@ on:
     paths:
       - 'config/raspberrypi4.config'
   schedule:
-    - cron: 0 0 * * 5
+    - cron: 0 0 * * 4
 #  watch:
 #    types: started
 
