@@ -17,8 +17,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'config/x86_64.config'
+#    paths:
+#      - 'config/x86_64.config'
   schedule:
     - cron: 0 0 * * 1,3,5
 #  watch:
@@ -163,5 +163,5 @@ jobs:
       with:
         repo_token: ${{ secrets.SuperSecret }}
         file: openwrt/bin/targets/x86/64/*
-        tag: ${{ github.ref }}
+        tag: release_x86-64${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         file_glob: true
