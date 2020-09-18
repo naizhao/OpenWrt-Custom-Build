@@ -20,7 +20,7 @@ on:
     paths:
       - 'config/raspberrypi4.config'
   schedule:
-    - cron: 0 0 * * 4
+    - cron: 0 1 * * 4
 #  watch:
 #    types: started
 
@@ -169,5 +169,5 @@ jobs:
       with:
         repo_token: ${{ secrets.SuperSecret }}
         file: openwrt/bin/targets/*/*/*
-        tag: ${{ github.ref }}
+        tag: release_rpi4${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         file_glob: true
