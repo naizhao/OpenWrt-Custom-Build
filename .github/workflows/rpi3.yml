@@ -20,7 +20,7 @@ on:
     paths:
       - 'config/rpi3-lean-openwrt.config'
   schedule:
-    - cron: 0 0 * * 6
+    - cron: 0 1 * * 6
 #  watch:
 #    types: started
 
@@ -161,5 +161,5 @@ jobs:
       with:
         repo_token: ${{ secrets.SuperSecret }}
         file: openwrt/bin/targets/*/*/*
-        tag: ${{ github.ref }}
+        tag: release_rpi3${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         file_glob: true
