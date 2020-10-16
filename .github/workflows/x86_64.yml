@@ -159,7 +159,7 @@ jobs:
         prerelease: false
    
     - name: Upload release asset
-      uses: svenstaro/upload-release-action@v2
+      uses: svenstaro/upload-release-action@master
       with:
         repo_token: ${{ secrets.SuperSecret }}
         file: openwrt/bin/targets/x86/64/*
