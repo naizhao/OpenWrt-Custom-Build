@@ -13,7 +13,7 @@ name: Build X86(64bit) OpenWrt
 on:
   push:
     branches:
-      - main
+      - master
   repository_dispatch:
   workflow_dispatch:
     inputs:
