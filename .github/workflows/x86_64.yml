@@ -11,9 +11,9 @@
 name: Build X86(64bit) OpenWrt
 
 on:
-  push:
-    branches:
-      - master
+#  push:
+#    branches:
+#      - master
   repository_dispatch:
   workflow_dispatch:
     inputs:
