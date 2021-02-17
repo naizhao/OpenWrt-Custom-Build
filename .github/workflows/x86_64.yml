@@ -197,5 +197,5 @@ jobs:
 
     - name: WeChat notification
       if: env.WECHAT_NOTIFICATION == 'true' && !cancelled() && steps.compile.outputs.status == 'success'
-      run: curl https://sctapi.ftqq.com/${{ secrets.WeChatKey }}.send?title=编译完成&desp=${{ steps.tag.outputs.release_tag }}_x86-64编译完成
+      run: curl "https://sctapi.ftqq.com/${{ secrets.WeChatKey }}.send?title=编译完成&desp=${{ steps.tag.outputs.release_tag }}_x86-64编译完成"
 
